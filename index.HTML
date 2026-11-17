@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mapa Medios Tecnológicos</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+}
+
+.container{
+  position:relative;
+  width:1400px;
+}
+
+.mapa{
+  width:100%;
+}
+
+.punto{
+  position:absolute;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:red;
+  cursor:pointer;
+}
+
+.punto1{
+  position:absolute;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:lightblue;
+  cursor:pointer;
+}
+
+.punto2{
+  position:absolute;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:brown;
+  cursor:pointer;
+}
+
+.punto3{
+  position:absolute;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:gold;
+  cursor:pointer;
+}
+
+.punto4{
+  position:absolute;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:purple;
+  cursor:pointer;
+}
+
+.suba{
+  position:absolute;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:orange;
+  cursor:pointer;
+}
+
+.norte{
+  position:absolute;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:green;
+  cursor:pointer;
+}
+
+.caracas{
+  position:absolute;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:blue;
+  cursor:pointer;
+}
+
+.caracassur{
+  position:absolute;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:darkorange;
+  cursor:pointer;
+}
+
+.decima{
+  position:absolute;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:deepskyblue;
+  cursor:pointer;
+}
+
+.eje{
+  position:absolute;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:pink;
+  cursor:pointer;
+}
+
+.nombre{
+    position:absolute;
+    background:#00B0FF;
+    color:black;
+    padding:4px 8px;
+    border-radius:5px;
+    font-size:12px;
+    font-weight:bold;
+    cursor:pointer;
+    z-index:9999;
+}
+
+.patio{
+    position:absolute;
+    background:#00B0FF;
+    color:black;
+    padding:4px 8px;
+    border-radius:5px;
+    font-size:12px;
+    font-weight:bold;
+    cursor:pointer;
+    z-index:9999;
+}
+
+
+
+.info{
+  position:fixed;
+  right:20px;
+  top:20px;
+  width:350px;
+  background:white;
+  border:1px solid #ccc;
+  padding:15px;
+  box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+</style>
+</head>
+
+<body>
+
+<script>
+
+document.addEventListener("mousemove", function(e){
+
+document.getElementById("coords").innerHTML =
+"X: " + e.pageX + " | Y: " + e.pageY;
+
+});
+
+</script>
+
+<div id="coords"
+style="
+position:fixed;
+bottom:10px;
+left:10px;
+background:white;
+padding:10px;
+border:1px solid black;">
+</div>
+
+<div class="container">
+
+<img src="mapa.png" class="mapa">
+
+<div class="punto" style="left:1130px;top:732px;"
+onclick="mostrar('TIBANICA')"></div>
+
+<div class="punto" style="left:1096px;top:721px;"
+onclick="mostrar('LAURELES')"></div>
+
+<div class="punto" style="left:1070px;top:684px;"
+onclick="mostrar('ISLANDIA')"></div>
+
+<div class="punto" style="left:965px;top:614px;"
+onclick="mostrar('PORTALAMERICAS')"></div>
+
+<div class="punto" style="left:940px;top:594px;"
+onclick="mostrar('PATIOBONITO')"></div>
+
+<div class="punto" style="left:912px;top:580px;"
+onclick="mostrar('TINTAL')"></div>
+
+<div class="punto" style="left:890px;top:543px;"
+onclick="mostrar('TV86')"></div>
+
+<div class="punto" style="left:899px;top:504px;"
+onclick="mostrar('BANDERAS')"></div>
+
+<div class="punto" style="left:892px;top:473px;"
+onclick="mostrar('MANDALAY')"></div>
+
+<div class="punto" style="left:884px;top:445px;"
+onclick="mostrar('AVAMERICASAVBOYACAINT')"></div>
+
+<div class="punto" style="left:950px;top:445px;"
+onclick="mostrar('AVAMERICASAVBOYACAEXT')"></div>
+
+<div class="punto" style="left:872px;top:408px;"
+onclick="mostrar('MARSELLA')"></div>
+
+<div class="punto" style="left:858px;top:362px;"
+onclick="mostrar('PRADERA')"></div>
+
+<div class="punto" style="left:846px;top:324px;"
+onclick="mostrar('DISTRITOGRAFITI')"></div>
+
+<div class="punto" style="left:844px;top:290px;"
+onclick="mostrar('PUENTEARANDA')"></div>
+
+<div class="punto" style="left:851px;top:268px;"
+onclick="mostrar('CRA43COMAPAN')"></div>
+
+<div class="punto" style="left:856px;top:248px;"
+onclick="mostrar('ZONAINDUSTRIAL')"></div>
+
+<div class="punto" style="left:864px;top:226px;"
+onclick="mostrar('CDSCRA32')"></div>
+
+<div class="punto" style="left:876px;top:190px;"
+onclick="mostrar('RICAURTE13')"></div>
+
+<div class="punto" style="left:890px;top:198px;"
+onclick="mostrar('CPRICAURTE')"></div>
+
+<div class="punto" style="left:882px;top:172px;"
+onclick="mostrar('SANFASCON')"></div>
+
+<div class="punto" style="left:891px;top:145px;"
+onclick="mostrar('DELASABANA')"></div>
+
+<div class="punto" style="left:899px;top:122px;"
+onclick="mostrar('JIMENEZ13')"></div>
+
+<div class="punto1" style="left:1300px;top:770px;"
+onclick="mostrar('VINCULO')"></div>
+
+<div class="punto1" style="left:1225px;top:685px;"
+onclick="mostrar('SANMATEO')"></div>
+
+<div class="punto1" style="left:1298px;top:685px;"
+onclick="mostrar('CPSANMATEO')"></div>
+
+<div class="nombre" style="left:1318px;top:770px;background:#00B0FF;">
+VINCULO</div>
+
+<div class="punto1" style="left:1203px;top:661px;"
+onclick="mostrar('TERREROS')"></div>
+
+<div class="punto1" style="left:1184px;top:649px;"
+onclick="mostrar('LEONXIII')"></div>
+
+<div class="punto1" style="left:1163px;top:627px;"
+onclick="mostrar('DESPENSA')"></div>
+
+<div class="punto1" style="left:1135px;top:592px;"
+onclick="mostrar('BOSA')"></div>
+
+<div class="punto1" style="left:1110px;top:540px;"
+onclick="mostrar('PORTALSUR')"></div>
+
+<div class="punto1" style="left:1160px;top:540px;"
+onclick="mostrar('CPPORTALSUR')"></div>
+
+<div class="punto1" style="left:1103px;top:515px;"
+onclick="mostrar('PERDOMO')"></div>
+
+<div class="punto1" style="left:1095px;top:491px;"
+onclick="mostrar('MADELENA')"></div>
+
+<div class="punto1" style="left:1075px;top:436px;"
+onclick="mostrar('SEVILLANA')"></div>
+
+<div class="punto1" style="left:1058px;top:407px;"
+onclick="mostrar('VENECIA')"></div>
+
+
+<div class="punto1" style="left:1050px;top:371px;"
+onclick="mostrar('ALQUERIA')"></div>
+
+
+<div class="punto1" style="left:1044px;top:345px;"
+onclick="mostrar('GENERALSANTANDER')"></div>
+
+<div class="punto1" style="left:1108px;top:345px;"
+onclick="mostrar('CPGENERALSANTANDER')"></div>
+
+<div class="punto1" style="left:1030px;top:310px;"
+onclick="mostrar('NQSCALLE38S')"></div>
+
+
+
+<div class="punto1" style="left:1020px;top:290px;"
+onclick="mostrar('NQSCALLE30S')"></div>
+
+
+
+<div class="punto1" style="left:960px;top:235px;"
+onclick="mostrar('SANTAISABEL')"></div>
+
+
+
+<div class="punto1" style="left:935px;top:226px;"
+onclick="mostrar('COMUNEROS')"></div>
+
+
+<div class="punto2" style="left:928px;top:200px;"
+onclick="mostrar('GUATOQUE')"></div>
+
+<div class="punto2" style="left:935px;top:170px;"
+onclick="mostrar('TYGUA')"></div>
+
+<div class="punto2" style="left:875px;top:205px;"
+onclick="mostrar('RICAURTECRA30')"></div>
+
+
+<div class="punto2" style="left:858px;top:196px;"
+onclick="mostrar('PALOQUEMAO')"></div>
+
+<div class="nombre" style="left:798px;top:236px;background:#00B0FF;">
+PHOJA</div>
+
+<div class="punto2" style="left:828px;top:220px;"
+onclick="mostrar('PHOJA')"></div>
+
+<div class="punto2" style="left:816px;top:186px;"
+onclick="mostrar('CAD')"></div>
+
+
+<div class="punto2" style="left:772px;top:183px;"
+onclick="mostrar('AVDORADO')"></div>
+
+
+<div class="punto2" style="left:746px;top:195px;"
+onclick="mostrar('UNACIONAL')"></div>
+
+
+<div class="punto2" style="left:700px;top:208px;"
+onclick="mostrar('CAMPIN')"></div>
+
+
+<div class="punto2" style="left:676px;top:217px;"
+onclick="mostrar('MOVISTAR')"></div>
+
+
+<div class="punto2" style="left:648px;top:222px;"
+onclick="mostrar('SIETEAGOSTO')"></div>
+
+
+<div class="punto2" style="left:600px;top:225px;"
+onclick="mostrar('AVCHILE')"></div>
+
+
+<div class="punto2" style="left:580px;top:220px;"
+onclick="mostrar('CALLE75')"></div>
+
+
+<div class="punto2" style="left:527px;top:188px;"
+onclick="mostrar('CASTELLANA')"></div>
+
+<div class="punto3" style="left:818px;top:137px;"
+onclick="mostrar('CENTROMEMORIA')"></div>
+
+<div class="punto3" style="left:804px;top:162px;"
+onclick="mostrar('CONCEJODEBOGOTA')"></div>
+
+<div class="punto3" style="left:780px;top:200px;"
+onclick="mostrar('CIUDADUNIVERSITARIA')"></div>
+
+<div class="punto3" style="left:774px;top:233px;"
+onclick="mostrar('CORFERIAS')"></div>
+
+<div class="punto3" style="left:767px;top:254px;"
+onclick="mostrar('QUINTAPAREDES')"></div>
+
+<div class="punto3" style="left:747px;top:280px;"
+onclick="mostrar('GOBERNACION')"></div>
+
+<div class="punto3" style="left:731px;top:301px;"
+onclick="mostrar('CAN')"></div>
+
+<div class="punto3" style="left:719px;top:320px;"
+onclick="mostrar('SALITREGRECO')"></div>
+
+<div class="punto3" style="left:700px;top:354px;"
+onclick="mostrar('ELTIEMPO')"></div>
+
+<div class="punto3" style="left:679px;top:381px;"
+onclick="mostrar('AVROJAS')"></div>
+
+<div class="punto3" style="left:660px;top:410px;"
+onclick="mostrar('NORMANDIA')"></div>
+
+<div class="punto3" style="left:638px;top:444px;"
+onclick="mostrar('MODELIA')"></div>
+
+<div class="punto3" style="left:605px;top:498px;"
+onclick="mostrar('PORTALDORADO')"></div>
+
+<div class="punto3" style="left:675px;top:498px;"
+onclick="mostrar('CPPORTALDORADO')"></div>
+
+<div class="punto4" style="left:557px;top:185px;"
+onclick="mostrar('POLO')"></div>
+
+<div class="punto4" style="left:544px;top:223px;"
+onclick="mostrar('ESCUELAMILITAR')"></div>
+
+<div class="punto4" style="left:540px;top:247px;"
+onclick="mostrar('CRA47')"></div>
+
+<div class="punto4" style="left:529px;top:273px;"
+onclick="mostrar('CRA53')"></div>
+
+<div class="punto4" style="left:516px;top:294px;"
+onclick="mostrar('AV68')"></div>
+
+<div class="punto4" style="left:502px;top:320px;"
+onclick="mostrar('FERIAS')"></div>
+
+<div class="punto4" style="left:493px;top:342px;"
+onclick="mostrar('BOYACA')"></div>
+
+<div class="punto4" style="left:489px;top:365px;"
+onclick="mostrar('MINUTODEDIOS')"></div>
+
+<div class="punto4" style="left:486px;top:396px;"
+onclick="mostrar('GRANJACRA77')"></div>
+
+<div class="punto4" style="left:476px;top:418px;"
+onclick="mostrar('AVCALI')"></div>
+
+<div class="punto4" style="left:477px;top:437px;"
+onclick="mostrar('CRA90')"></div>
+
+<div class="punto4" style="left:476px;top:455px;"
+onclick="mostrar('QUIRIGUA')"></div>
+
+<div class="punto4" style="left:471px;top:473px;"
+onclick="mostrar('PORTAL80')"></div>
+
+<div class="punto4" style="left:518px;top:473px;"
+onclick="mostrar('CPPORTAL80')"></div>
+
+<div class="suba" style="left:534px;top:205px;"
+onclick="mostrar('SANMARTIN')"></div>
+
+<div class="suba" style="left:515px;top:203px;"
+onclick="mostrar('RIONEGRO')"></div>
+
+<div class="suba" style="left:498px;top:210px;"
+onclick="mostrar('SUBACALLE95')"></div>
+
+<div class="suba" style="left:472px;top:230px;"
+onclick="mostrar('SUBACALLE100')"></div>
+
+<div class="suba" style="left:462px;top:246px;"
+onclick="mostrar('PUENTELARGO')"></div>
+
+<div class="suba" style="left:444px;top:265px;"
+onclick="mostrar('SUBACALLE116')"></div>
+
+<div class="suba" style="left:410px;top:288px;"
+onclick="mostrar('HUMEDALCORDOBA')"></div>
+
+<div class="suba" style="left:382px;top:306px;"
+onclick="mostrar('NIZA127')"></div>
+
+<div class="suba" style="left:343px;top:337px;"
+onclick="mostrar('SUBAAVBOYACA')"></div>
+
+<div class="suba" style="left:310px;top:350px;"
+onclick="mostrar('GRATAMIRA')"></div>
+
+<div class="suba" style="left:292px;top:385px;"
+onclick="mostrar('A21ANGELES')"></div>
+
+<div class="suba" style="left:290px;top:419px;"
+onclick="mostrar('TV91')"></div>
+
+<div class="suba" style="left:280px;top:452px;"
+onclick="mostrar('CAMPIÑA')"></div>
+
+<div class="suba" style="left:272px;top:478px;"
+onclick="mostrar('PORTALSUBA')"></div>
+
+<div class="suba" style="left:216px;top:474px;"
+onclick="mostrar('CPPORTALSUBA')"></div>
+
+<div class="norte" style="left:63px;top:283px;"
+onclick="mostrar('TERMINAL')"></div>
+
+<div class="norte" style="left:92px;top:276px;"
+onclick="mostrar('CALLE187')"></div>
+
+<div class="norte" style="left:134px;top:265px;"
+onclick="mostrar('PORTALNORTE')"></div>
+
+<div class="norte" style="left:134px;top:235px;"
+onclick="mostrar('CPPORTALNORTEORI')"></div>
+
+<div class="norte" style="left:134px;top:295px;"
+onclick="mostrar('CPPORTALNORTEOCCI')"></div>
+
+<div class="norte" style="left:172px;top:256px;"
+onclick="mostrar('TOBERIN')"></div>
+
+<div class="norte" style="left:200px;top:251px;"
+onclick="mostrar('CALLE161')"></div>
+
+<div class="norte" style="left:230px;top:244px;"
+onclick="mostrar('MAZUREN')"></div>
+
+<div class="norte" style="left:254px;top:239px;"
+onclick="mostrar('CALLE146')"></div>
+
+<div class="norte" style="left:275px;top:234px;"
+onclick="mostrar('CALLE142')"></div>
+
+<div class="norte" style="left:304px;top:227px;"
+onclick="mostrar('ALCALA')"></div>
+
+<div class="norte" style="left:304px;top:190px;"
+onclick="mostrar('CPALCALA')"></div>
+
+<div class="norte" style="left:334px;top:220px;"
+onclick="mostrar('PRADO')"></div>
+
+<div class="norte" style="left:379px;top:210px;"
+onclick="mostrar('CALLE127')"></div>
+
+<div class="norte" style="left:418px;top:202px;"
+onclick="mostrar('PEPESIERRA')"></div>
+
+<div class="norte" style="left:442px;top:196px;"
+onclick="mostrar('CALLE106')"></div>
+
+<div class="norte" style="left:489px;top:184px;"
+onclick="mostrar('CALLE100')"></div>
+
+<div class="norte" style="left:527px;top:174px;"
+onclick="mostrar('VIRREY')"></div>
+
+<div class="norte" style="left:547px;top:171px;"
+onclick="mostrar('CALLE85')"></div>
+
+<div class="norte" style="left:566px;top:167px;"
+onclick="mostrar('HEROES')"></div>
+
+<div class="caracas" style="left:610px;top:158px;"
+onclick="mostrar('CALLE72')"></div>
+
+<div class="caracas" style="left:631px;top:154px;"
+onclick="mostrar('FLORES')"></div>
+
+<div class="caracas" style="left:684px;top:146px;"
+onclick="mostrar('CALLE57')"></div>
+
+<div class="caracas" style="left:712px;top:139px;"
+onclick="mostrar('MARLY')"></div>
+
+<div class="caracas" style="left:768px;top:129px;"
+onclick="mostrar('AV39')"></div>
+
+<div class="caracas" style="left:798px;top:122px;"
+onclick="mostrar('CALLE34')"></div>
+
+<div class="caracas" style="left:824px;top:120px;"
+onclick="mostrar('CALLE26')"></div>
+
+<div class="caracas" style="left:852px;top:125px;"
+onclick="mostrar('CALLE22')"></div>
+
+<div class="caracas" style="left:911px;top:138px;"
+onclick="mostrar('JIMENEZCARACAS')"></div>
+
+<div class="caracassur" style="left:1318px;top:186px;"
+onclick="mostrar('PORTALUSME')"></div>
+
+<div class="caracassur" style="left:1268px;top:205px;"
+onclick="mostrar('DANUBIO')"></div>
+
+<div class="caracassur" style="left:1213px;top:227px;"
+onclick="mostrar('MOLINOS')"></div>
+
+<div class="caracassur" style="left:1188px;top:251px;"
+onclick="mostrar('CONSUELO')"></div>
+
+<div class="caracassur" style="left:1172px;top:268px;"
+onclick="mostrar('SOCORRO')"></div>
+
+<div class="caracassur" style="left:1150px;top:298px;"
+onclick="mostrar('BIBLIOTECA')"></div>
+
+<div class="caracassur" style="left:1163px;top:313px;"
+onclick="mostrar('PARQUE')"></div>
+
+<div class="caracassur" style="left:1183px;top:330px;"
+onclick="mostrar('PORTALTUNAL')"></div>
+
+<div class="caracassur" style="left:1270px;top:364px;"
+onclick="mostrar('JUANPABLOII')"></div>
+
+<div class="caracassur" style="left:1292px;top:370px;"
+onclick="mostrar('MANITAS')"></div>
+
+<div class="caracassur" style="left:1310px;top:400px;"
+onclick="mostrar('PARAISO')"></div>
+
+<div class="caracassur" style="left:1150px;top:280px;"
+onclick="mostrar('SANTALUCIA')"></div>
+
+<div class="caracassur" style="left:1105px;top:258px;"
+onclick="mostrar('CALLE40SUR')"></div>
+
+<div class="caracassur" style="left:1092px;top:238px;"
+onclick="mostrar('QUIROGA')"></div>
+
+<div class="caracassur" style="left:1058px;top:202px;"
+onclick="mostrar('OLAYA')"></div>
+
+<div class="caracassur" style="left:1042px;top:188px;"
+onclick="mostrar('RESTREPO')"></div>
+
+<div class="caracassur" style="left:1025px;top:175px;"
+onclick="mostrar('FUCHA')"></div>
+
+<div class="caracassur" style="left:1003px;top:164px;"
+onclick="mostrar('NARIÑO')"></div>
+
+<div class="caracassur" style="left:980px;top:156px;"
+onclick="mostrar('HORTUA')"></div>
+
+<div class="decima" style="left:1120px;top:140px;"
+onclick="mostrar('PORTAL20DEJULIO')"></div>
+
+<div class="decima" style="left:1087px;top:160px;"
+onclick="mostrar('COUNTRYSUR')"></div>
+
+<div class="decima" style="left:1062px;top:152px;"
+onclick="mostrar('A1MAYO')"></div>
+
+<div class="decima" style="left:1112px;top:94px;"
+onclick="mostrar('CP1MAYO')"></div>
+
+<div class="decima" style="left:1028px;top:143px;"
+onclick="mostrar('CIUDADJARDIN')"></div>
+
+<div class="decima" style="left:996px;top:134px;"
+onclick="mostrar('POLICARPA')"></div>
+
+<div class="decima" style="left:979px;top:130px;"
+onclick="mostrar('SANBERNARDO')"></div>
+
+<div class="decima" style="left:951px;top:125px;"
+onclick="mostrar('BICENTENARIO')"></div>
+
+<div class="decima" style="left:915px;top:118px;"
+onclick="mostrar('SANVICTORINO')"></div>
+
+<div class="decima" style="left:877px;top:113px;"
+onclick="mostrar('LASNIEVES')"></div>
+
+<div class="decima" style="left:855px;top:108px;"
+onclick="mostrar('SANDIEGO')"></div>
+
+<div class="decima" style="left:823px;top:106px;"
+onclick="mostrar('MUSEONACIONAL')"></div>
+
+<div class="decima" style="left:1196px;top:41px;"
+onclick="mostrar('ALTAMIRA')"></div>
+
+<div class="decima" style="left:1180px;top:94px;"
+onclick="mostrar('LAVICTORIA')"></div>
+
+<div class="decima" style="left:1130px;top:129px;"
+onclick="mostrar('T20JULIO')"></div>
+
+<div class="eje" style="left:872px;top:74px;"
+onclick="mostrar('UNIVERSIDADES')"></div>
+
+<div class="eje" style="left:892px;top:78px;"
+onclick="mostrar('LASAGUAS')"></div>
+
+<div class="eje" style="left:896px;top:94px;"
+onclick="mostrar('MUSEOORO')"></div>
+
+<div class="eje" style="left:920px;top:40px;"
+onclick="mostrar('CPLASAGUAS')"></div>
+
+</div>
+
+<div class="info" id="info">
+
+<h2>Estación</h2>
+
+Seleccione una estación
+
+</div>
+
+<script src="estaciones.js"></script>
+
+</body>
+</html>
